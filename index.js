@@ -5,6 +5,8 @@ document.querySelector('form').addEventListener('submit', (event) => {
     const encrypted = btoa(input);
 
     const displayMessage = document.querySelector('#display-message');
-    displayMessage.value = encrypted;
+    /* window.location contains locations (URL) of file, back ticks required otherwise it will display whole window.location object with un necessary information.  */
+    displayMessage.value = `${window.location}#${encrypted}`;
+    displayMessage.select(); /* to automatically select generated URL so user don't have to manually copy it */
     input.value = '';
 });
