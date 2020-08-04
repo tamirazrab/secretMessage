@@ -19,16 +19,24 @@
 			.row {
 				margin-top: 30vh; /* drag down 30% of total height */
 			}
+			/* removing default margin spacing of h1 element */
+			h1 {
+				margin-top: 0;
+			}
 		</style>
 	</head>
 	<body>
 		<!-- Creating form -->
 		<div class="row">
 			<div class="col s8 offset-s2">
+				<div id="display-form" class="card-panel hide">
+					<h1></h1>
+					<div><a href="./index.html">Create your own encoded message</a></div>
+				</div>
 				<div id="input-form" class="card-panel">
 					<form action="">
 						<label for="">Enter Secret Message</label>
-						<input type="text" id="message-input" />
+						<input id="message-input" />
 						<button class="btn">Create</button>
 					</form>
 				</div>
