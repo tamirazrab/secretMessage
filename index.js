@@ -1,6 +1,12 @@
 document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault(); /* to disable browser default behaviour of taking input and sending it to back-end server */
 
+    /* hiding input form */
+    document.querySelector('#input-form').classList.add('hide');
+
+    /* showing output form - which is hidden by default */
+    document.querySelector('#output-form').classList.remove('hide');
+
     const input = document.querySelector('#message-input');
     const encrypted = btoa(input);
 

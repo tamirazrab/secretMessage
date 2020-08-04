@@ -15,20 +15,24 @@
 			body {
 				background-color: black;
 			}
+			/* making box scale center to screen */
+			.row {
+				margin-top: 30vh; /* drag down 30% of total height */
+			}
 		</style>
 	</head>
 	<body>
 		<!-- Creating form -->
 		<div class="row">
 			<div class="col s8 offset-s2">
-				<div class="card-panel">
+				<div id="input-form" class="card-panel">
 					<form action="">
 						<label for="">Enter Secret Message</label>
 						<input type="text" id="message-input" />
 						<button class="btn">Create</button>
 					</form>
 				</div>
-				<div class="card-panel">
+				<div id="output-form" class="card-panel hide">
 					<div>
 						Share Secret Message with friends
 						<input type="text" id="display-message" />
